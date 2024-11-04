@@ -1,0 +1,193 @@
+/*
+
+NOTE TO SELF 
+Remove styles from Tumblr Blog, use <link>
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+        
+/* Structure */            
+* { box-sizing: border-box !important; }
+img, header, html, body, #random-text { max-width: 100% !important; }
+nav, .logo, #random-text { width: 100%; }
+html, body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    background: {color:Background};
+}       
+header, main, footer, article, footer, footer #bottom, .footernav, #pagination, .post, #postfooter { width: 100%; }
+footer, .copyright { margin: auto; }
+main { margin: 0px 0px 40px 0px; }
+
+/* header */
+header { margin: 20px 10px 0px 10px; }
+nav {
+    max-width: 400px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+nav .navlink {
+    text-transform: uppercase;
+    line-height: 1.85em;
+    padding: 5px 10px;
+    margin-right: 10px;
+}
+.logo {
+    margin: 40px 0px 20px 0px;
+    max-width: 100px !important;
+}
+
+/* Typography */
+body, p {
+    font-size: 10pt;
+    line-height: 1.5em;
+    font-weight: 300;
+}
+h1, h1 a, h2, h2 a, h3, h3 a, h4 a, h5 a, h6 a, .title, .title a body, p, ol, ul, li, #random-text { color: {color:Text}; !important }
+h4, h4 a, h5, h5 a, h6, h6 a, blockquote { margin: 0; }
+h4, h4 a, h5, h5 a, h6, h6 a, body, p { font-family: "Saira", sans-serif; }
+h1, h2, h3, h3 a, .title, .title a, #random-text { font-family: "Orbitron", sans-serif; }
+h1, h2, h2 a, .title, .title a { text-transform: uppercase; }
+.title, .title a {
+    font-weight: 800 !important;
+    font-size: 36pt;
+    letter-spacing: 2px;
+    line-height: 1.5em;
+}
+h1 {
+    font-size: 24pt;
+    font-weight: 400;
+}
+h2, h2 a {
+    font-size: 18pt;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+h3, h3 a {
+    font-weight: 400;
+    font-size: 14pt;
+}
+h4, h4 a, h5, h5 a, h6, h6 a {
+    font-weight: 300;
+    font-size: 12pt;
+    line-height: 1.75em;
+}
+    /* links */     
+    a, a:link, a:active, a:visited, .current a, nav a:visited, footer a:visited {
+        text-decoration: none;
+        color: {color:Link} !important;
+        font-weight: 400;
+    }
+    .post a:hover, nav a:hover, #postfooter a:hover {
+        text-decoration: underline !important;
+        color: {color:Link} !important;
+    }
+    /* Misc */       
+    blockquote {
+        padding: 0;
+    }
+
+/* page specific */
+.ind, .per, .tag {
+    width: 100%;
+    padding: 0px 10px;
+}
+    {block:TagPage}
+        .ind, .per { display: none; }
+    {/block:TagPage}
+            
+    {block:PermalinkPage}
+        .ind, .per { display: none; }
+        main, article {
+            width: 100%;
+            max-width: 550px !important;
+            display: block !important;
+            margin: auto !important;
+        }
+    {/block:PermalinkPage}
+    
+/* Random Text */
+#random-text {
+    font-size: 7pt; 
+    font-weight: 300;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    max-width: 350px !important;
+}
+#random-text::before {
+    content: '"';
+    font-size: 10pt;
+}
+#random-text::after {
+    content: '"';
+    font-size: 10pt;
+}
+
+/* Posts */
+main {
+    max-width: 1180px;
+    padding: 0px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+article {
+    max-width: 550px;
+    margin: 20px 0px 40px 0px;
+}
+.post-photo img, .post-photoset img {
+    padding-right: 10px;
+}
+
+/* post footer */
+#postfooter { margin-top: 20px; }
+.postdate, .postdate a {
+    margin-bottom: 10px;
+    color: #000;
+}
+            
+/* pagination */
+#pagination {
+    max-width: 850px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    font-family: "Orbitron", sans-serif;
+    text-transform: uppercase;
+}
+.pages {
+    max-width: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.pgnm, .prev, .next {
+    padding: 10px;
+    margin: 0px 10px;
+}
+
+/* Footer */
+footer { padding: 40px 10px 80px 10px; }
+footer #bottom {
+    text-align: center;
+    margin-top: 30px;
+}
+.footlink {
+    display: inline;
+    margin: 0px 10px;
+    text-transform: uppercase;
+}
+.copyright {
+    font-size: 9pt;
+    max-width: 600px;
+    padding-top: 40px;
+}
